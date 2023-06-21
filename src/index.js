@@ -11,7 +11,7 @@ const setupserver = async () => {
   const app = express();
   app.use(bodyparser.json());
   app.use(bodyparser.urlencoded({ extended: true }));
-  app.use("/api", apiroutes);
+  app.use("flightservice/api", apiroutes);
   app.listen(PORT, async () => {
     console.log(`server started at ${PORT}`);
     //      const repo=new cityRepository();
